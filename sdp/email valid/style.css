@@ -1,0 +1,52 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .form-container {
+    background-color: white;
+    width: 700px; /* Increased the width of the form */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  input[type="text"] {
+    padding: 12px;
+    width: 100%; /* Make the input field take the full width */
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Includes padding in the width calculation */
+    margin-bottom: 20px; /* Added space below the input */
+  }
+  
+  button {
+    padding: 12px;
+    width: 100%; /* Make the button take the full width */
+    font-size: 18px;
+    margin-top: 10px; /* Space between input and button */
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #357ae8;
+  }
+  
+  .example {
+    margin-top: 20px;
+    color: #555;
+  }
+  

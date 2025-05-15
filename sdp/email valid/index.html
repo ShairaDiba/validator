@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Validator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Email Validator</h1>
+
+    <form>
+      <input type="text" id="email" placeholder="Enter your email" required />
+      <button onclick="validateEmail()">Validate Email</button>
+    </form>
+
+    <div class="example">
+      Example: example@domain.com
+    </div>
+  </div>
+
+  <script>
+    function validateEmail() {
+        const email = document.getElementById("email").value.trim();
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(email === ""){
+            alert("please Enter an Email Address!");
+        }
+        else if(pattern.test(email)){
+            alert("Valid Email Address!");
+
+        }
+        else{
+            alert("Invalid Email Address. Please Try Again!");
+        }
+    }
+  </script>
+
+</body>
+</html>

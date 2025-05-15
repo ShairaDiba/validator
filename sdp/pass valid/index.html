@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Validator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Password Validator</h1>
+
+    <form>
+      <input type="password" id="password" placeholder="Enter your password" required />
+      <button onclick="validatePassword()">Validate Password</button>
+    </form>
+
+    <div class="example">
+      <ul type ="disc">
+        <li>Must contain 8 characters</li>
+        <li>Must contain uppercase & lowercase</li>
+        <li>Must contain numbers and symbols</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function validatePassword() {
+        const password = document.getElementById("password").value.trim();
+
+        const isLongEnough = password.length >= 8;
+        const hasLetter = /[a-zA-Z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasUpper = /[A-Z]/.test(password);
+        const hasLower = /[a-z]/.test(password);
+
+        if(password === ""){
+            alert("Please Enter a Password!");
+        }
+        else if(!isLongEnough){
+            alert("Password must be at least 8 characters long");
+
+        }
+        else if(!hasLetter || !hasNumber){
+            alert("Password must contain both letter and number");
+
+        }
+        else if(!hasUpper || !hasLower){
+            alert("Password must contain both uppercase and lowercase");
+
+        }
+        else{
+            alert("Password is valid!");
+        }
+    }
+  </script>
+
+
+
+</body>
+</html>
